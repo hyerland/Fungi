@@ -1,6 +1,7 @@
 # Documentation
 node_modules
 bun.lockb
+/docs/.vitepress/cache
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
