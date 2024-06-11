@@ -7,8 +7,8 @@ hero:
   text: "Python discord bot"
   tagline: Self-hosted discord bot with an extensive configuration file to fit any servers need, all for free.
   image:
-    src: /assets/fungi.svg
-    alt: VitePress
+    src: ./fungi.svg
+    alt: Fungi
   actions:
     - theme: brand
       text: Get started 🚀

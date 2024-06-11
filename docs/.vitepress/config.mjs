@@ -4,13 +4,13 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Fungi",
   description: "Self-hosted discord bot with an extensive configuration file to fit any servers need, all for free.",
-  head: [['link', { rel: 'icon', href: '/assets/favicon.ico' }]],
+  head: [['link', { rel: 'icon', href: './favicon.ico' }]],
 
   lastUpdated: true,
 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    logo: '/assets/favicon.ico',
+    logo: './favicon.ico',
 
     footer: {
       message: 'Released under the <a href="https://github.com/hyerland/Fungi/blob/main/LICENSE">MIT License</a>.',
