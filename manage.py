@@ -45,14 +45,18 @@ def callback(verbose: Annotated[bool, typer.Option("--verbose", "-v")] = False):
 
         print("Starting first time setup...")
 
+        name = Prompt.ask("What would you like to name your bot?")
         token = Prompt.ask("\n[dim](https://discord.com/developers)[/dim]\nEnter your discord bot token", password=True)
         prefix = Prompt.ask("What prefix would you like to use? (!ping or $ping)")
 
         temp = {
                 "token": token,
                 "bot": {
+                    "name": name,
                     "prefix": prefix
-                }
+                },
+                "settings": {},
+                "other": {}
             }
 
         print_json(data=temp, indent=4)

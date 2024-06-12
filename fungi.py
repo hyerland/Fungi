@@ -1,10 +1,12 @@
 import discord
 import json
 import logging
+from datetime import datetime
 from discord.ext import commands
 from rich import print
 from rich.console import Console
 from rich.logging import RichHandler
+from manage import version
 
 # * Load configuration
 with open('fungi.json') as f:
@@ -17,21 +19,40 @@ with open('fungi.json') as f:
 log = logging.getLogger("fungi")
 log.addHandler(RichHandler(markup = True, console = Console()))
 
-    
-
+#* Set up intents
 intents = discord.Intents.default()
 intents.message_content = True
 
-client = commands.Bot(command_prefix="!", intents=intents)
+client = commands.Bot(command_prefix=config['bot']['prefix'], intents=intents)
+client.remove_command('help')
 
 @client.event
 async def on_ready():
     print(f'[green][{client.user}][/green] Logged in successfully! :star:')
 
-@client.command()
-async def test(ctx):
-    await ctx.send('test')
-    log.debug(f"{ctx.author} ran the `test` command")
+@client.command(help="All available commands and their descriptions")
+async def help(ctx):
+    embed = discord.Embed(title=f"{config['bot']['name']} Commands", 
+                          description=f"All available commands and their descriptions which can be used with the `{config['bot']['prefix']}` prefix.",
+                          colour=0xa4aef5,
+                          timestamp=datetime.now())
+    for command in client.commands:
+        embed.add_field(name=command.name, value=command.help, inline=True)
+
+    if config['other']['disable_fungi_watermark']:
+        embed.set_footer(text=f"(v{version})")
+        # :(
+    else:
+        embed.set_footer(text=f"Fungi Framework (v{version})",
+                 icon_url="https://cdn.discordapp.com/avatars/1249930441285177395/7e949ee8eea41f6c135dfc32907e499f.png?size=1024")
+    await ctx.send(embed=embed)
+    log.info(f"{ctx.author} ran the `help` command.")
+
+
+@client.command(help="Find client latency.")
+async def ping(ctx):
+    await ctx.send(f"> Pong! {round(client.latency * 1000)}ms")
+    log.info(f"{ctx.author} ran the `ping` command. Latency: {round(client.latency * 1000)}ms")
 
 def logLevel() -> int:
     if config['settings']['runtime_logs']:
