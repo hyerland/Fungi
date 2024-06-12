@@ -16,21 +16,37 @@ export default defineConfig({
       message: 'Released under the <a href="https://github.com/hyerland/Fungi/blob/main/LICENSE">MIT License</a>.',
       copyright: 'Copyright © 2024 - Present, <a href="https://github.com/hyerland">Adam Garza</a>'
     },
+    
+    editLink: {
+      pattern: 'https://github.com/hyerland/fungi/edit/main/docs/:path'
+    },
 
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Documentation', link: '/guides/' }
+      { text: 'Documentation', link: '/guides/' },
+      { text: 'Community', link: '/community/' }
     ],
 
-    sidebar: [
-      {
-        text: 'Guides 📚',
-        items: [
-          { text: 'Introduction', link: '/guides/' },
-          // { text: 'Getting Started 🚀', link: '/guides/getting-started' },
-        ]
-      }
-    ],
+    sidebar: {
+      '/guides/': [
+        {
+          text: 'Guides 📚',
+          items: [
+            { text: 'Introduction', link: '/guides/' },
+            { text: 'Getting Started 🚀', link: '/guides/getting-started' },
+          ]
+        }
+      ],
+
+      '/community/': [
+        {
+          text: 'Community 🌎',
+          items: [
+            { text: 'People of Fungi', link: '/community/' },
+          ]
+        }
+      ]
+    },
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/hyerland/fungi' },
