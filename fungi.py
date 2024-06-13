@@ -12,6 +12,7 @@ from manage import version
 with open('fungi.json') as f:
     config = json.load(f)
 
+
 #* Set up logging
 # FORMAT = "[orange]Fungi Runtime[/orange] - %(message)s"
 # formatter = logging.Formatter(FORMAT)
@@ -53,6 +54,26 @@ async def help(ctx):
 async def ping(ctx):
     await ctx.send(f"> Pong! {round(client.latency * 1000)}ms")
     log.info(f"{ctx.author} ran the `ping` command. Latency: {round(client.latency * 1000)}ms")
+
+@client.command(help=config["commands"]["ban"]["help"])
+@commands.has_permissions(ban_members=True)
+async def ban(ctx, member: discord.Member, *, reason=None):
+    if config["commands"]["ban"]["enabled"]:
+        if config["commands"]["ban"]["require_reason"] and not reason:
+            await ctx.send("Provide a reason. 🚫")
+        else:
+            try:
+                await member.ban(reason=reason)
+                await ctx.message.delete()
+                await ctx.channel.send(f'{member.name} has been banned from server\n'
+                                    f'> Reason: {reason}')
+            except Exception:
+                await ctx.channel.send(f"{config['bot']['name']} doesn't have enough permissions to ban someone." 
+                                    "Upgrade the Permissions.")
+            # except discord.ext.commands.errors.MissingRequiredArgument:
+            #     await ctx.send("Please provide a member to ban. 🚫")
+    else:
+        await ctx.send("Provided configuration has disabled this command. 🚫")
 
 def logLevel() -> int:
     if config['settings']['runtime_logs']:
