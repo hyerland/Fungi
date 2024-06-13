@@ -3,6 +3,8 @@
 People of fungi (contributors, translators, etc.) are important as they shaped the project for new improvements and helped make Fungi possible. *In fact,
 they're so important that they're all here!*
 
+![Showing a mushroom guiding others to success](../fungi-community-1.png)
+
 ## Contributors
 
 <script setup>
@@ -16,6 +18,14 @@ const members = [
     links: [
       { icon: 'github', link: 'https://github.com/hyerland' },
       { icon: 'twitter', link: 'https://x.com/adamg_dev' }
+    ]
+  },
+  {
+    avatar: 'https://yt3.googleusercontent.com/tWrxeWzw2FvMPDrJpIBvK2jhHBKgt7Qnqhu349Qiyq3Z0i5X9xRhWsHHdErHaEhOfdOnLWeEJLk=s176-c-k-c0x00ffffff-no-rj',
+    name: 'hiivemiind',
+    title: 'Graphic Designer',
+    links: [
+      { icon: 'youtube', link: 'https://www.youtube.com/@hiivemiind.' },
     ]
   },
 ]
