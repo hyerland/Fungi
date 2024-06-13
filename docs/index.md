@@ -13,6 +13,9 @@ hero:
     - theme: brand
       text: Get started 🚀
       link: /guides
+    - theme: brand
+      text: View configuration 🔨
+      link: /config
     - theme: alt
       text: View on GitHub
       link: https://github.com/hyerland/fungi

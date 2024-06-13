@@ -84,3 +84,4 @@ def logLevel() -> int:
 
 if __name__ == '__main__':
     client.run(config['token'], log_handler=RichHandler(markup = True, console = Console()), log_level = logLevel())
+    

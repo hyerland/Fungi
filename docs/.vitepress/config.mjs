@@ -23,7 +23,13 @@ export default defineConfig({
 
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Documentation', link: '/guides/' },
+      {
+        text: 'Documentation',
+        items: [
+          { text: 'Guides 📚', link: '/guides/' },
+          { text: 'Configuration 🔨', link: '/config/' }
+        ]
+      },
       { text: 'Community', link: '/community/' }
     ],
 
@@ -43,6 +49,16 @@ export default defineConfig({
           text: 'Community 🌎',
           items: [
             { text: 'People of Fungi', link: '/community/' },
+          ]
+        }
+      ],
+      '/config/': [
+        {
+          text: 'Configuration 🔨',
+          items: [
+            { text: 'Overview', link: '/config/' },
+            { text: 'Settings', link: '/config/settings' },
+            { text: 'Other', link: '/config/other' },
           ]
         }
       ]
