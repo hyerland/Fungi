@@ -7,7 +7,7 @@ For installation instructions, please look at the [Getting Started](./getting-st
 Fungi is a self-hosted discord bot with an extensive configuration file to fit any servers need. Whether it's a reading club to a promising band,
 you can configure fungi to suit your server's needs. **All for free.**
 
-![A campsite showing mushrooms having a nice time.](../fungi-introduction-1.png)
+![A campsite showing mushrooms having a nice time.](/fungi-introduction-1.png)
 
 ## So... What is exactly Fungi?
 

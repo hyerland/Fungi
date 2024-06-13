@@ -3,7 +3,7 @@
 People of fungi (contributors, translators, etc.) are important as they shaped the project for new improvements and helped make Fungi possible. *In fact,
 they're so important that they're all here!*
 
-![Showing a mushroom guiding others to success](../fungi-community-1.png)
+![Showing a mushroom guiding others to success](/fungi-community-1.png)
 
 ## Contributors
 
