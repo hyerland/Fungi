@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "fungi-bot"
+version = "0.0.0"
+description = "Self-hosted discord bot with an extensive configuration file to fit any servers need, all for free."
+authors = ["Adam Garza <168875175+hyerland@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [
+    { include = "fungi", from = "src" },
+]
+
+[tool.poetry.scripts]
+fungi = "fungi.manage:app"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+typer = {extras = ["all"], version = "^0.12.3"}
+discord-py = "^2.3.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
