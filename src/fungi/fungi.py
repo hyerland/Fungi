@@ -6,7 +6,7 @@ from discord.ext import commands
 from rich import print
 from rich.console import Console
 from rich.logging import RichHandler
-from manage import version
+from src.fungi.manage import version
 
 # * Load configuration
 with open('fungi.json') as f:

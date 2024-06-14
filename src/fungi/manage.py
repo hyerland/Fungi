@@ -77,7 +77,7 @@ def callback():
 
 @app.command()
 def start():
-    subprocess.run(["python", "-m", "fungi"], shell=True)
+    subprocess.run(["python", "-m", "fungi.fungi"], shell=True)
 
 
 if __name__ == "__main__":
