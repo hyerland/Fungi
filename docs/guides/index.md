@@ -2,6 +2,8 @@
 
 :::tip
 For installation instructions, please look at the [Getting Started](./getting-started.md) guide.
+
+For configuration instructions in the [Configuration](../config/) guides to configure fungi properly.
 :::
 
 Fungi is a self-hosted discord bot with an extensive configuration file to fit any servers need. Whether it's a reading club to a promising band,

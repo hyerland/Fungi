@@ -2,9 +2,9 @@
 
 Typically used to host bot wide settings in which provide extra information or features to the bot.
 
-## `runtime_logs` <Badge type="tip" text="^0.1.0" />
+## `runtime_logs` <Badge type="tip" text="^0.1.0" /> <Badge type="info" text="FTS Field" />
 
-Enable extra debugging logs for the bot.
+Enable extra logs for the bot. Primarily used for debugging on developer environments to find root causes of bugs and issues.
 
 ```json
 "settings": {
