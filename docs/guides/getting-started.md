@@ -15,7 +15,7 @@ pip install fungi-bot
 
 This would install the **latest stable** version of Fungi to your python installation.
 
-## How to use fungi
+## Using Fungi
 
 Using fungi can be done by doing the following within a terminal.
 
@@ -23,6 +23,21 @@ Using fungi can be done by doing the following within a terminal.
 fungi start
 ```
 
+:::info
+If you already have an application and token, you can skip this step.
+
+### Creating an application
+
+In order to continue, head to [discord.com/developers](https://discord.com/developers/) to create an application.
+
+- After creating an application, go to the "Bot" tab and generate and copy the token.
+  - Never post or share your token with anyone. It's a major security risk and could let to your account getting hacked by bad actors.
+  
+- Here is where you can customize the profile of the bot which isn't required but makes your bot nice to use.
+
+:::warning
+**Fungi** or **Fungi Framework** doesn't store any information about your application in servers, fungi only works on your local machine with your configuration.
+:::
 This will start the FTS *(First Time Setup)* of the Fungi Framework with only asking vital information such as, **token, name, prefix, and to have debug mode enabled**
 
 By default, Fungi will store the configuration with the current working directory for instance, if you run `fungi start` in `C:/Users/Example/Documents` and the configuration will be stored in `C:/Users/Example/Documents/fungi.json` for later use and reference.

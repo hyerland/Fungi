@@ -56,9 +56,14 @@ export default defineConfig({
         {
           text: 'Configuration 🔨',
           items: [
-            { text: 'Overview', link: '/config/' },
-            { text: 'Settings', link: '/config/settings' },
-            { text: 'Other', link: '/config/other' },
+            { text: 'Overview', 
+              link: '/config/', 
+              items: [
+                { text: 'Commands', link: '/config/commands' },
+                { text: 'Settings', link: '/config/settings' },
+                { text: 'Other', link: '/config/other' },
+                ]
+            },
           ]
         }
       ]

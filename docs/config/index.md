@@ -7,8 +7,8 @@ An example of the configuration file is shown below:
 
 ```json
 {
-    "token": "XXXXXXX",
     "bot": {
+        "token": "XXXXXXX",
         "name": "Example",
         "prefix": "!"
     },
@@ -28,7 +28,3 @@ An example of the configuration file is shown below:
 }
 
 ```
-
-:::warning
-As of **v0.1.0** or greater, all commands are required to be included whatever you have `enabled` to true or false.
-:::
