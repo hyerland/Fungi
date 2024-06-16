@@ -44,3 +44,30 @@ Bans mentioned user.
 ```
 
 :::
+
+## `roll` <Badge type="tip" text="^0.1.0" />
+
+Rolls a random number between 1-10 by default.
+
+- `number`: Number to roll between. Rolls from 1 - `number` set by the configuration
+  - Can be overridden by user when running the command
+
+::: code-group
+
+```json [Enabled - Default]
+"roll": {
+    "enabled": true,
+    "help": "Rolls a random number between 1-10 by default.",
+    "number": 10
+}
+```
+
+```json [Disabled]
+"roll": {
+    "enabled": false,
+    "help": "Rolls a random number between 1-10 by default.",
+    "number": 10
+}
+```
+
+:::

@@ -15,13 +15,13 @@ Remove all "Fungi Framework" branding from the commands and messages.
 
 ```json [Enabled - Default]
 "other": {
-    "disable_fungi_watermark": false
+    "disable_fungi_watermark": true
 }
 ```
 
 ```json [Disabled]
 "other": {
-    "disable_fungi_watermark": true
+    "disable_fungi_watermark": false
 }
 ```
 

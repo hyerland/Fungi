@@ -9,22 +9,28 @@ An example of the configuration file is shown below:
 {
     "bot": {
         "token": "XXXXXXX",
-        "name": "Example",
+        "name": "Fungi",
         "prefix": "!"
     },
     "settings": {
-        "runtime_logs": false
+        "runtime_logs": true
     },
     "commands": {
         "ban": {
             "enabled": true,
             "help": "Bans mentioned user.",
             "require_reason": true
+        },
+        "roll": {
+            "enabled": true,
+            "help": "Rolls a random number between 1-10 by default.",
+            "number": 20
         }
     },
     "other": {
         "disable_fungi_watermark": false
     }
 }
+
 
 ```

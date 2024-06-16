@@ -1,5 +1,6 @@
 import discord
 import json
+import random
 import logging
 from datetime import datetime
 from discord.ext import commands
@@ -8,7 +9,9 @@ from rich.console import Console
 from rich.logging import RichHandler
 from src.fungi.manage import version
 
-# * Load configuration
+#TODO: Rewrite or overhaul codebase to not require commands to be within `fungi.json`
+
+#* Load configuration
 with open('fungi.json') as f:
     config = json.load(f)
 
@@ -31,6 +34,14 @@ client.remove_command('help')
 async def on_ready():
     print(f'[green][{client.user}][/green] Logged in successfully! :star:')
 
+@client.event
+async def on_command_error(ctx, error):
+    if config['settings']['runtime_logs']:
+        await ctx.send(f"An error occurred!\n> {error}")
+    else:
+        await ctx.send("An error occurred!")
+    log.error(error)
+
 @client.command(help="All available commands and their descriptions")
 async def help(ctx):
     embed = discord.Embed(title=f"{config['bot']['name']} Commands", 
@@ -44,7 +55,7 @@ async def help(ctx):
         embed.set_footer(text=f"(v{version})")
         # :(
     else:
-        embed.set_footer(text=f"Fungi Framework (v{version})",
+        embed.set_footer(text=f"Fungi Framework (v{version}) | Serving {len(client.guilds)} Servers",
                  icon_url="https://cdn.discordapp.com/avatars/1249930441285177395/7e949ee8eea41f6c135dfc32907e499f.png?size=1024")
     await ctx.send(embed=embed)
     log.info(f"{ctx.author} ran the `help` command.")
@@ -75,6 +86,13 @@ async def ban(ctx, member: discord.Member, *, reason=None):
     else:
         await ctx.send("Provided configuration has disabled this command. 🚫")
 
+@client.command(help=config["commands"]["roll"]["help"])
+async def roll(ctx, number: int = config["commands"]["roll"]["number"]):
+    if config["commands"]["roll"]["enabled"]:
+       await ctx.send(f"{random.randint(1, number)}")
+    else:
+        await ctx.send("Provided configuration has disabled this command. 🚫")
+
 def logLevel() -> int:
     if config['settings']['runtime_logs']:
         log.debug("Runtime logs enabled")
@@ -83,5 +101,5 @@ def logLevel() -> int:
         return logging.INFO
 
 if __name__ == '__main__':
-    client.run(config['token'], log_handler=RichHandler(markup = True, console = Console()), log_level = logLevel())
+    client.run(config['bot']['token'], log_handler=RichHandler(markup = True, console = Console()), log_level = logLevel())
     

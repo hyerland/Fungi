@@ -35,8 +35,8 @@ def callback():
 
         # temp = config
         temp = {
-                "token": token,
                 "bot": {
+                    "token": token,
                     "name": name,
                     "prefix": prefix
                 },
