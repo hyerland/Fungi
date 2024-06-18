@@ -20,6 +20,15 @@ export default defineConfig({
     editLink: {
       pattern: 'https://github.com/hyerland/fungi/edit/main/docs/:path'
     },
+    
+    search: {
+      provider: 'algolia',
+      options: {
+        appId: '7PX6C4338U',
+        apiKey: 'df7a40c506154c3d29acc38b2b821eb5',
+        indexName: 'fungibot'
+      }
+    },
 
     nav: [
       { text: 'Home', link: '/' },
