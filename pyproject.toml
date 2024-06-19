@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "fungi-bot"
-version = "0.0.0"
+version = "0.1.0"
 description = "Self-hosted discord bot with an extensive configuration file to fit any servers need, all for free."
 authors = ["Adam Garza <168875175+hyerland@users.noreply.github.com>"]
 license = "MIT"
@@ -8,6 +8,9 @@ readme = "README.md"
 packages = [
     { include = "fungi", from = "src" },
 ]
+homepage = "https://fungibot.netlify.app"
+repository = "https://github.com/hyerland/fungi"
+documentation = "https://fungibot.netlify.app/guides"
 
 [tool.poetry.scripts]
 fungi = "fungi.manage:app"
