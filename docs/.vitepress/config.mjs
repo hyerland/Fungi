@@ -58,6 +58,7 @@ export default defineConfig({
           text: 'Community 🌎',
           items: [
             { text: 'People of Fungi', link: '/community/' },
+            { text: 'Changelog', link: 'https://github.com/hyerland/Fungi/blob/main/CHANGELOG.md' },
           ]
         }
       ],
