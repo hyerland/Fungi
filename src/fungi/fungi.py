@@ -1,6 +1,7 @@
 import discord
 import json
 import random
+import asyncio
 import logging
 from datetime import datetime
 from discord.ext import commands
@@ -36,11 +37,7 @@ async def on_ready():
 
 @client.event
 async def on_command_error(ctx, error):
-    if config['settings']['runtime_logs']:
         await ctx.send(f"An error occurred!\n> {error}")
-    else:
-        await ctx.send("An error occurred!")
-    log.error(error)
 
 @client.command(help="All available commands and their descriptions")
 async def help(ctx):
@@ -58,7 +55,6 @@ async def help(ctx):
         embed.set_footer(text=f"Fungi Framework (v{version}) | Serving {len(client.guilds)} Servers",
                  icon_url="https://cdn.discordapp.com/avatars/1249930441285177395/7e949ee8eea41f6c135dfc32907e499f.png?size=1024")
     await ctx.send(embed=embed)
-    log.info(f"{ctx.author} ran the `help` command.")
 
 
 @client.command(help="Find client latency.")
@@ -90,6 +86,19 @@ async def ban(ctx, member: discord.Member, *, reason=None):
 async def roll(ctx, number: int = config["commands"]["roll"]["number"]):
     if config["commands"]["roll"]["enabled"]:
        await ctx.send(f"{random.randint(1, number)}")
+    else:
+        await ctx.send("Provided configuration has disabled this command. 🚫")
+
+@client.command(help=config["commands"]["purge"]["help"])
+@commands.has_permissions(manage_messages=True)
+async def purge(ctx, limit: int):
+    if config["commands"]["purge"]["enabled"]:
+        await ctx.message.delete()
+        await asyncio.sleep(1)
+        await ctx.channel.purge(limit=limit)
+        purge_embed = discord.Embed(title='Purge [!purge]', description=f'Successfully purged {limit} messages. \n Command executed by {ctx.author}.', color=discord.Colour.random())
+        purge_embed.set_footer(text=str(datetime.now()))
+        await ctx.channel.send(embed=purge_embed)
     else:
         await ctx.send("Provided configuration has disabled this command. 🚫")
 

@@ -48,6 +48,15 @@ def callback():
                         "enabled": True,
                         "help": "Bans mentioned user.",
                         "require_reason": True
+                    },
+                    "roll": {
+                        "enabled": True,
+                        "help": "Rolls a random number between 1-10 by default.",
+                        "number": 10
+                    },
+                    "purge": {
+                        "enabled": True,
+                        "help": "Purges messages."
                     }
                 },
                 "other": {
