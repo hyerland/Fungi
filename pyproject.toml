@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "fungi-bot"
-version = "0.1.0"
+version = "0.1.1"
 description = "Self-hosted discord bot with an extensive configuration file to fit any servers need, all for free."
 authors = ["Adam Garza <168875175+hyerland@users.noreply.github.com>"]
 license = "MIT"
