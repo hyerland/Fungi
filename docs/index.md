@@ -13,7 +13,7 @@ hero:
     - theme: brand
       text: Get started 🚀
       link: /guides
-    - theme: brand
+    - theme: alt
       text: View configuration 🔨
       link: /config
     - theme: alt

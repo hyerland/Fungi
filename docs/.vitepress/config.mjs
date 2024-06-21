@@ -39,7 +39,7 @@ export default defineConfig({
           { text: 'Configuration 🔨', link: '/config/' }
         ]
       },
-      { text: 'Community', link: '/community/' }
+      { text: 'Developers', link: '/developers/' }
     ],
 
     sidebar: {
@@ -53,11 +53,18 @@ export default defineConfig({
         }
       ],
 
-      '/community/': [
+      '/developers/': [
         {
-          text: 'Community 🌎',
+          text: 'Developers 💻',
           items: [
-            { text: 'People of Fungi', link: '/community/' },
+            { text: 'People of Fungi 🍄', link: '/developers/' },
+            // { text: 'Contributing', 
+              // link: '/developers/overview', 
+              // items: [
+                // { text: 'Contributing to Fungi', link: '/developers/fungi' },
+                // { text: 'Contributing to Docs', link: '/developers/docs' }
+                // ]
+            // },
             { text: 'Changelog', link: 'https://github.com/hyerland/Fungi/blob/main/CHANGELOG.md' },
           ]
         }

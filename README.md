@@ -16,6 +16,8 @@ Self-hosted discord bot with an extensive configuration file to fit any servers 
   - 80% of fungi can be configurable to fit any server's needs. From anime servers to reading clubs, fungi can surely find a place.
 - 🔨 100% Free, and Open Source
   - Being able to be open source means every single feature and configuration is free and open to you to edit. No hidden traps. 🎈
+- ✨ Early Development
+  - Fungi is being actively developed and improved from features to bug fixes and improvements in which came from your support and voices.
 
 > Visit the documentation website for a more pleasing viewing experience: [https://fungibot.netlify.app](https://fungibot.netlify.app)
 
@@ -81,7 +83,7 @@ Fungi wouldn't be possible without the help of all of the people who have contri
 - hiivemiind
   - Graphic Designer | Created all graphics shown within the project.
 
-> Find them here for their related links and more: [https://fungibot.netlify.app/community/#contributors](https://fungibot.netlify.app/community/#contributors)
+> Find them here for their related links and more: [https://fungibot.netlify.app/developers/#contributors](https://fungibot.netlify.app/developers/#contributors)
 
 Fungi wouldn't also be possible without contributions from the community on github.
 
