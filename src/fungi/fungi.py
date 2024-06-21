@@ -8,9 +8,11 @@ from discord.ext import commands
 from rich import print
 from rich.console import Console
 from rich.logging import RichHandler
-from src.fungi.manage import version
 
 #TODO: Rewrite or overhaul codebase to not require commands to be within `fungi.json`
+
+#? Metadata
+version = "0.1.1"
 
 #* Load configuration
 with open('fungi.json') as f:
@@ -52,7 +54,7 @@ async def help(ctx):
         embed.set_footer(text=f"(v{version})")
         # :(
     else:
-        embed.set_footer(text=f"Fungi Framework (v{version}) | Serving {len(client.guilds)} Servers",
+        embed.set_footer(text=f"Fungi Framework (v{version}) | Instance serving {len(client.guilds)} Servers",
                  icon_url="https://cdn.discordapp.com/avatars/1249930441285177395/7e949ee8eea41f6c135dfc32907e499f.png?size=1024")
     await ctx.send(embed=embed)
 
@@ -96,7 +98,9 @@ async def purge(ctx, limit: int):
         await ctx.message.delete()
         await asyncio.sleep(1)
         await ctx.channel.purge(limit=limit)
-        purge_embed = discord.Embed(title='Purge [!purge]', description=f'Successfully purged {limit} messages. \n Command executed by {ctx.author}.', color=discord.Colour.random())
+        purge_embed = discord.Embed(title='Purge [!purge]', 
+                                    description=f'Successfully purged {limit} messages. \n Command executed by {ctx.author}.', 
+                                    color=0xa4aef5)
         purge_embed.set_footer(text=str(datetime.now()))
         await ctx.channel.send(embed=purge_embed)
     else:

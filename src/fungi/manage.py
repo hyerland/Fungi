@@ -13,7 +13,7 @@ from typing_extensions import Annotated
 app = typer.Typer(add_completion=False)
 
 #? Metadata
-version = "0.1.0"
+version = "0.1.1"
 
 @app.callback()
 def callback():
@@ -65,7 +65,7 @@ def callback():
                 }
 
         shorthand_temp = {
-            "token": token,
+            "token": "..." + token[-5:],
             "name": name,
             "prefix": prefix,
             "debug?": debug
@@ -82,7 +82,7 @@ def callback():
             print("Exiting...")
             exit(1)
 
-        print("[green]First time setup complete! :rocket:\nVisit https://fungibot.netlify.app/ for more info on configuration.")
+        print("[green]First time setup complete! :rocket:\nVisit https://fungibot.netlify.app/config for more info on configuration.")
 
 @app.command()
 def start():
