@@ -11,11 +11,11 @@ hero:
     alt: Fungi
   actions:
     - theme: brand
-      text: Get started 🚀
+      text: What is Fungi?
       link: /guides
     - theme: alt
-      text: View configuration 🔨
-      link: /config
+      text: Quick Start
+      link: /guides/getting-started
     - theme: alt
       text: View on GitHub
       link: https://github.com/hyerland/fungi

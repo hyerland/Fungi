@@ -10,3 +10,21 @@ Fungi and its related libraries, websites, and more are licensed under the [MIT 
 :::
 
 Fungi is considered a smaller **monorepo** meaning both **Framework and Documentation website** are included within the git repository.
+
+<!-- <div class="info custom-block" style="padding-top: 8px">
+
+For documentation development, please look at the [Contributing to Docs](./docs.md) guide.
+
+</div>
+
+<div class="tip custom-block" style="padding-top: 8px">
+
+For fungi development, please look at the [Contributing to Fungi](./fungi.md) guide.
+
+:::warning
+Due to the nature of the project, development can be challenging as others may do similar work or have similar ideas.
+:::
+
+> Requires <iconify-icon icon="vscode-icons:file-type-python" width="1.2rem" height="1.2rem" style="padding-right: 1.2rem"></iconify-icon> 3.8 or higher for development
+
+</div> -->

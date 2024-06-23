@@ -4,7 +4,13 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Fungi",
   description: "Self-hosted discord bot with an extensive configuration file to fit any servers need, all for free.",
-  head: [['link', { rel: 'icon', href: './favicon.ico' }]],
+  head: [
+    ['link', { rel: 'icon', href: './favicon.ico' }],
+    [
+      'script',
+      { src: "https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js" }
+    ],
+  ],
 
   lastUpdated: true,
 
@@ -47,7 +53,7 @@ export default defineConfig({
         {
           text: 'Guides 📚',
           items: [
-            { text: 'Introduction', link: '/guides/' },
+            { text: 'What is Fungi?', link: '/guides/' },
             { text: 'Getting Started 🚀', link: '/guides/getting-started' },
           ]
         }
@@ -58,13 +64,14 @@ export default defineConfig({
           text: 'Developers 💻',
           items: [
             { text: 'People of Fungi 🍄', link: '/developers/' },
-            // { text: 'Contributing', 
-              // link: '/developers/overview', 
+            { text: 'Contributing',
+              collapsed: false,
+              link: '/developers/overview', 
               // items: [
-                // { text: 'Contributing to Fungi', link: '/developers/fungi' },
-                // { text: 'Contributing to Docs', link: '/developers/docs' }
-                // ]
-            // },
+              //   { text: 'Contributing to Fungi', link: '/developers/fungi' },
+              //   { text: 'Contributing to Docs', link: '/developers/docs' }
+              //   ]
+            },
             { text: 'Changelog', link: 'https://github.com/hyerland/Fungi/blob/main/CHANGELOG.md' },
           ]
         }
