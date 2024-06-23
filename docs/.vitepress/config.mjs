@@ -45,7 +45,13 @@ export default defineConfig({
           { text: 'Configuration 🔨', link: '/config/' }
         ]
       },
-      { text: 'Developers', link: '/developers/' }
+      {
+        text: 'Community',
+        items: [
+          { text: 'People of Fungi 🍄', link: '/developers/' },
+          { text: 'Developers', link: '/developers/overview' }
+        ]
+      },
     ],
 
     sidebar: {
@@ -63,7 +69,7 @@ export default defineConfig({
         {
           text: 'Developers 💻',
           items: [
-            { text: 'People of Fungi 🍄', link: '/developers/' },
+            // { text: 'People of Fungi 🍄', link: '/developers/' },
             { text: 'Contributing',
               collapsed: false,
               link: '/developers/overview', 

@@ -1,5 +1,6 @@
 ---
 layout: page
+sidebar: false
 ---
 <h1 align="center" class="fungi-title">
 People of Fungi 🍄
