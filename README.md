@@ -10,6 +10,9 @@
     <img alt="PyPI - Version" src="https://img.shields.io/pypi/v/fungi-bot?style=flat-square&logo=pypi&logoColor=white&logoSize=auto&label=Version&labelColor=black&color=pink">
 </p>
 
+> [!WARNING]
+> Project is getting rewritten completely in a new repository, [Rodent.](https://github.com/hyerland/rodent)
+
 Self-hosted discord bot with an extensive configuration file to fit any servers need, all for free.
 
 - 💻 Extensive configuration
